@@ -18,7 +18,7 @@
 						Monday – Sunday
 					</span>
 					<span class="whitespace-nowrap text-right text-sm text-brown sm:text-base">
-						8:00 AM – 11:00 PM
+						7:00 AM – 12:00 PM
 					</span>
 				</div>
 			</div>
