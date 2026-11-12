@@ -9,13 +9,17 @@
 	</h2>
 
 	<div class="mt-10 grid gap-10 md:grid-cols-2">
-		<div>
+		<div class="min-w-0">
 			<h3 class="font-serif text-2xl font-semibold text-brown">Opening hours</h3>
 
-			<div class="mt-4 max-w-md rounded-md bg-cream p-5">
-				<div class="flex items-center justify-between gap-4">
-					<span class="font-medium text-brown">Monday – Sunday</span>
-					<span class="text-brown">8:00 AM – 11:00 PM</span>
+			<div class="mt-4 w-full max-w-md rounded-md bg-cream p-4 sm:p-5">
+				<div class="grid grid-cols-[1fr_auto] items-center gap-x-2 sm:gap-x-4">
+					<span class="whitespace-nowrap text-sm font-medium text-brown sm:text-base">
+						Monday – Sunday
+					</span>
+					<span class="whitespace-nowrap text-right text-sm text-brown sm:text-base">
+						8:00 AM – 11:00 PM
+					</span>
 				</div>
 			</div>
 
@@ -25,24 +29,29 @@
 				{#each business.addressLines as line (line)}
 					{line}<br />
 				{/each}
-				<a href={business.phoneHref} class="mt-3 inline-block py-1 font-medium text-terracotta underline underline-offset-4">
+
+				<a
+					href={business.phoneHref}
+					class="mt-3 inline-block py-1 font-medium text-terracotta underline underline-offset-4"
+				>
 					{business.phoneDisplay}
 				</a>
 			</address>
 
 			<div class="mt-6 flex flex-col gap-3 sm:flex-row">
 				<a
-    href="https://maps.app.goo.gl/wate76wsp5eMGmQH7"
-    target="_blank"
-    rel="noopener noreferrer"
+					href="https://maps.app.goo.gl/wate76wsp5eMGmQH7"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="inline-flex min-h-12 items-center justify-center rounded-full bg-terracotta px-7 font-medium text-ivory hover:bg-brown"
 				>
 					Get directions
 				</a>
+
 				<a
 					href={mapLocations.view}
 					target="_blank"
-					rel="noopener"
+					rel="noopener noreferrer"
 					class="inline-flex min-h-12 items-center justify-center rounded-full border border-brown px-7 font-medium text-brown hover:bg-brown hover:text-ivory"
 				>
 					View on Google Maps

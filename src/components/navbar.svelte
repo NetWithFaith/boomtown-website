@@ -17,61 +17,27 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <header class="sticky top-0 z-50 border-b border-brown/10 bg-ivory/95 backdrop-blur">
-	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-2.5">
 
-		<!-- BoomTown Luxury Editorial wordmark -->
-		<a
-			href="#top"
-			onclick={closeMenu}
-			aria-label="BoomTown home"
-			class="flex w-fit shrink-0 flex-col items-center text-brown"
-		>
-			<!-- Cloche and extended gold lines -->
-			<div class="flex w-full items-center gap-1 text-[#B89558]">
-				<span class="h-2px flex-1 bg-current"></span>
+		<!-- Compact BoomTown Luxury Editorial wordmark -->
+		
+<a
+	href="#top"
+	onclick={closeMenu}
+	aria-label="BoomTown home"
+	class="flex shrink-0 flex-col items-start text-brown"
+>
+	<!-- Main wordmark -->
+	<span class="font-serif text-[1.4rem] font-bold leading-none tracking-[-0.045em] sm:text-2xl">
+		BOOMTOWN<span class="text-[#B89558]">.</span>
+	</span>
 
-				<svg
-					aria-hidden="true"
-					viewBox="0 0 64 48"
-					class="h-8 w-11 shrink-0"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				>
-					<circle cx="32" cy="5" r="2.5" fill="currentColor" stroke="none" />
-					<path d="M32 8v3" />
-					<path d="M12 37a20 20 0 0 1 40 0" />
-					<path d="M9 40h46" />
-					<path d="M15 37h34" />
-				</svg>
+	<!-- Brand descriptor -->
+	<span class="mt-1 whitespace-nowrap text-[6px] font-semibold uppercase tracking-[0.16em] text-[#8C7048] sm:text-[7px]">
+		Restaurant · Lounge · Coffee Shop
+	</span>
+</a>
 
-				<span class="h-2px flex-1 bg-current"></span>
-			</div>
-
-			<!-- Main wordmark -->
-			<span class="mt-0.5 whitespace-nowrap font-serif text-[1.65rem] font-bold leading-none tracking-[-0.045em] md:text-3xl">
-				{business.shortname.toUpperCase()}
-			</span>
-
-			<!-- Curved gold underline -->
-			<svg
-				aria-hidden="true"
-				viewBox="0 0 220 12"
-				class="mt-0.5 h-2 w-[90%] text-[#B89558]"
-				fill="none"
-			>
-				<path d="M2 10 Q110 -5 218 10" stroke="currentColor" stroke-width="1.5" />
-			</svg>
-
-			<!-- Descriptor -->
-			<span class="mt-1 whitespace-nowrap text-[6px] font-medium uppercase tracking-[0.15em] text-brown md:text-[7px]">
-				Restaurant <span class="text-[#B89558]">•</span>
-				Lounge <span class="text-[#B89558]">•</span>
-				Coffee Shop
-			</span>
-		</a>
 
 		<!-- Desktop navigation -->
 		<nav aria-label="Main" class="hidden md:block">

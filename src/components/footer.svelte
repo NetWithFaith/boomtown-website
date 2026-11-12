@@ -7,6 +7,7 @@
 
 <footer class="on-dark bg-charcoal py-12 text-ivory/85">
 	<div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-3">
+		<!-- Business information -->
 		<div>
 			<p class="font-serif text-2xl font-semibold text-ivory">
 				{business.shortname}
@@ -14,11 +15,15 @@
 			<p class="mt-2 text-sm">{business.name}</p>
 		</div>
 
+		<!-- Footer navigation -->
 		<nav aria-label="Footer">
 			<ul class="space-y-1">
 				{#each mapLinks as link (link.href)}
 					<li>
-						<a href={link.href} class="inline-block py-1 hover:text-gold">
+						<a
+							href={link.href}
+							class="inline-block py-1 hover:text-gold"
+						>
 							{link.label}
 						</a>
 					</li>
@@ -26,6 +31,7 @@
 			</ul>
 		</nav>
 
+		<!-- Contact information and social links -->
 		<div>
 			<address class="text-sm not-italic">
 				{#each business.addressLines as line (line)}
@@ -39,12 +45,13 @@
 			>
 				{business.phoneDisplay}
 			</a>
+
 			<a
-    href="mailto:boomtownphc@gmail.com"
-    class="mt-2 inline-block py-1 hover:text-gold"
->
-    boomtownphc@gmail.com
-</a>
+				href="mailto:boomtownphc@gmail.com"
+				class="mt-2 inline-block py-1 hover:text-gold"
+			>
+				boomtownphc@gmail.com
+			</a>
 
 			{#if business.socials.length > 0}
 				<ul class="mt-4 flex items-center gap-4">
@@ -92,12 +99,21 @@
 		</div>
 	</div>
 
-	<div class="mx-auto mt-10 max-w-6xl border-t border-ivory/15 px-5 pt-6 text-xs">
-		<p>© {year} BoomTown Restaurant & Coffee Shop PHC.</p>
-		<p class="mt-2">
-			Independent website redesign concept by
-			<span class="font-semibold text-ivory">Frank Faith Tamunonengiyeofori</span>.
-			This is not the official BoomTown website.
+	<!-- Copyright, developer credit and disclaimer -->
+	<div class="mx-auto mt-10 max-w-6xl border-t border-ivory/15 px-5 pt-6 text-center">
+		<p class="text-xs text-ivory/60">
+			© {year} BoomTown Restaurant & Coffee Shop PHC.
+		</p>
+
+		<p class="mt-3 text-xs text-ivory/60">
+			A digital experience crafted by
+			<span class="font-medium text-gold">
+				Frank Faith Tamunonengiyeofori
+			</span>
+		</p>
+
+		<p class="mt-3 text-[11px] text-ivory/45">
+			Independent website redesign concept. This is not the official BoomTown website.
 		</p>
 	</div>
 </footer>
