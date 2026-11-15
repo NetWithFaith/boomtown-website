@@ -16,7 +16,7 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
-<header class="sticky top-0 z-50 border-b border-brown/10 bg-ivory/95 backdrop-blur">
+<header class="sticky top-0 z-50 border-b border-brown/10 bg-ivory">
 	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-2.5">
 
 		<!-- Compact BoomTown Luxury Editorial wordmark -->

@@ -48,14 +48,7 @@
 					Get directions
 				</a>
 
-				<a
-					href={mapLocations.view}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-flex min-h-12 items-center justify-center rounded-full border border-brown px-7 font-medium text-brown hover:bg-brown hover:text-ivory"
-				>
-					View on Google Maps
-				</a>
+				
 			</div>
 		</div>
 
