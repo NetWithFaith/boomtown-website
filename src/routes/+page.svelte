@@ -11,7 +11,6 @@
   import ContactCTA from '../components/contactcta.svelte';
     </script>
 
-    <div id="top"></div>
 
     <Navbar />
 

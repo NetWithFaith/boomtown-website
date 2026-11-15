@@ -30,28 +30,98 @@
 	];
 </script>
 
-<section id="gallery" aria-labelledby="gallery-heading" class="bg-cream py-16 md:py-24">
-	<div class="mx-auto max-w-6xl px-5">
-		<h2 id="gallery-heading" class="font-serif text-3xl font-semibold text-brown md:text-4xl">
-			Little moments
-		</h2>
+<section
+	id="gallery"
+	aria-labelledby="gallery-heading"
+	class="overflow-hidden bg-cream py-20 sm:py-24 lg:py-32"
+>
+	<div class="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
 
-		<p class="mt-3 text-brown">
-			A glimpse of the moments waiting for you at BoomTown.
-		</p>
+		<!-- Gallery introduction -->
+		<div class="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
+			<div>
+				<p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-terracotta">
+					<span class="h-px w-8 bg-terracotta"></span>
+					A taste of BoomTown
+				</p>
 
-		<div class="relative mt-8">
-			<div class="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4">
-				{#each photos as photo (photo.src)}
-					<div class="h-64 w-[80%] flex-none snap-start overflow-hidden rounded-t-[4rem] rounded-b-md sm:h-80 sm:w-[55%] md:w-[40%]">
-						<Photo src={photo.src} alt={photo.alt} />
-					</div>
-				{/each}
+				<h2
+					id="gallery-heading"
+					class="font-serif text-4xl font-semibold tracking-tight text-brown sm:text-5xl lg:text-6xl"
+				>
+					Little moments.
+					<span class="block font-normal italic text-terracotta">Lasting memories.</span>
+				</h2>
 			</div>
+
+			<p class="max-w-sm text-base leading-relaxed text-charcoal/75 sm:text-lg">
+				A glimpse of the food, spaces and moments that make every visit memorable.
+			</p>
 		</div>
 
-		<p class="mt-2 text-sm text-brown">
-			Scroll sideways to explore the photos →
+		<!-- Asymmetric gallery -->
+		<div class="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+
+			<!-- Large outdoor photograph -->
+			<figure class="col-span-2 row-span-2 min-h-64 overflow-hidden sm:min-h-80 lg:min-h-520px">
+				<div class="group h-full overflow-hidden">
+					<Photo
+						src={photos[0].src}
+						alt={photos[0].alt}
+						class="transition-transform duration-700 group-hover:scale-105"
+					/>
+				</div>
+			</figure>
+
+			<!-- Food photograph -->
+			<figure class="aspect-4/5 overflow-hidden">
+				<div class="group h-full overflow-hidden">
+					<Photo
+						src={photos[1].src}
+						alt={photos[1].alt}
+						class="transition-transform duration-700 group-hover:scale-105"
+					/>
+				</div>
+			</figure>
+
+			<!-- Brand photograph -->
+			<figure class="aspect-4/5 overflow-hidden">
+				<div class="group h-full overflow-hidden">
+					<Photo
+						src={photos[2].src}
+						alt={photos[2].alt}
+						class="transition-transform duration-700 group-hover:scale-105"
+					/>
+				</div>
+			</figure>
+
+			<!-- Drink photograph -->
+			<figure class="aspect-4/5 overflow-hidden">
+				<div class="group h-full overflow-hidden">
+					<Photo
+						src={photos[3].src}
+						alt={photos[3].alt}
+						class="transition-transform duration-700 group-hover:scale-105"
+					/>
+				</div>
+			</figure>
+
+			<!-- Close-up food photograph -->
+			<figure class="aspect-4/5 overflow-hidden">
+				<div class="group h-full overflow-hidden">
+					<Photo
+						src={photos[5].src}
+						alt={photos[5].alt}
+						class="transition-transform duration-700 group-hover:scale-105"
+					/>
+				</div>
+			</figure>
+
+		</div>
+
+		<!-- Final caption -->
+		<p class="mt-7 text-xs uppercase tracking-[0.18em] text-brown/55">
+			Good food · Good company · Good memories
 		</p>
 	</div>
 </section>
